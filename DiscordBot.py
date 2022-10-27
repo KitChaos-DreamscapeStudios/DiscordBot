@@ -1,7 +1,7 @@
 import discord
 from pynput.keyboard import Key, Controller
 import random
-
+import json
 keyboard = Controller()
 
 
@@ -68,6 +68,10 @@ class MyClient(discord.Client):
 ##intents.message_content = Trues
 
 client = MyClient()
-token = open("Token.txt", 'r')
-client.run(token)
+f = open('Token.json')
+
+token = json.load(f)
+
+
+client.run(token["BotData"][0]["Token"])
 
