@@ -68,6 +68,6 @@ class MyClient(discord.Client):
 ##intents.message_content = Trues
 
 client = MyClient()
-
-client.run('MTAzNDkyMzM0MTE3OTUyNzI2OA.GekHhf.uHhJIfrc-Sz7ekHTPBIXe7zayr1afpK7OKXr1Y')
+token = open("Token.txt", 'r')
+client.run(token)
 
